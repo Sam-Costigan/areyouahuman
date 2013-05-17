@@ -1,0 +1,18 @@
+.field.ayah {
+    
+}
+
+.field.ayah label {
+    display: none;
+}
+
+.field.ayah .middleColumn {
+    width: auto;
+    padding: 0;
+    background: transparent;
+}
+
+.field.ayah .message.required {
+    display: block;
+    margin: 4px 0 5px 3px;
+}
