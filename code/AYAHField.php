@@ -2,7 +2,7 @@
 
 require_once(dirname(__FILE__) . '/../thirdparty/ayah.php');        
 
-class AYAHField extends SpamProtectorField {
+class AYAHField extends FormField {
     protected $ayah = null;
     
     public static $publisher_key = '';
