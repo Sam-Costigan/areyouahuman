@@ -22,4 +22,9 @@ class AYAHProtector implements SpamProtector {
 	function sendFeedback($object = null, $feedback = "") {
 		return false;
 	}
+
+	/**
+	 * Not needed by Are You a Human
+	 */
+	public function setFieldMapping($fieldMapping) {}
 }
