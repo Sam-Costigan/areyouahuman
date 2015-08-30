@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
+	"name": "stw/areyouahuman",
+	"type": "silverstripe-module",
+=======
 	"name": "sam-costigan/areyouahuman",
 	"description": "The Are You a Human Module allows use of the Are You a Human Spam Protection game as both a FormField type (AYAHField) and as the default Spam Protector when integrated with the Spam Protection Module.",
 	"type": "silverstripe-module",
@@ -9,6 +13,7 @@
 		"email": "samdcostigan@gmail.com"
 	}
 	],
+>>>>>>> 7a6f43fcc7d478ed02e02d9072e72e53b21a4e40
 	"require": {
 		"silverstripe/framework": "3.*",
 		"silverstripe/cms": "3.*"

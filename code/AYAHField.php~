@@ -21,13 +21,15 @@ class AYAHField extends FormField {
     
     function validate($validator) {
         $score = $this->ayah->scoreResult();
-        if ($score) {
-		return true;
-	}
+        if ($score)
+            return true;
         
-        if ($validator) {
-		$validator->validationError($this, 'You have failed the human test!', "required");
-	}
+        if ($validator)
+<<<<<<< HEAD
+            $validator->validationError($this, 'You have failed the human test!', "required");
+=======
+            $validator->validationError($this->Name(), 'You have failed the human test!', "required");
+>>>>>>> 7a6f43fcc7d478ed02e02d9072e72e53b21a4e40
         return false;
     }
     
