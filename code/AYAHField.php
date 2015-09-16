@@ -12,7 +12,7 @@ class AYAHField extends FormField {
     function __construct($name = 'AYAHField', $title = null, $value = null, $form = null, $rightTitle = null) {
         parent::__construct($name, $title, $value, $form, $rightTitle);
 
-        $this->ayah = new AYAH\AYAH(array(
+        $this->ayah = new AYAH(array(
             'publisher_key' => self::$publisher_key,
             'scoring_key' => self::$scoring_key,
             'web_service_host' => self::$web_service_host
