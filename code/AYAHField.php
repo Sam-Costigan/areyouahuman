@@ -2,14 +2,16 @@
 
 require_once(dirname(__FILE__) . '/../thirdparty/ayah.php');
 
-class AYAHField extends FormField {
+class AYAHField extends FormField
+{
     protected $ayah = null;
     
     public static $publisher_key = '';
     public static $scoring_key = '';
     public static $web_service_host = 'ws.areyouahuman.com';
     
-    function __construct($name = 'AYAHField', $title = null, $value = null, $form = null, $rightTitle = null) {
+    public function __construct($name = 'AYAHField', $title = null, $value = null, $form = null, $rightTitle = null)
+    {
         parent::__construct($name, $title, $value, $form, $rightTitle);
 
         $this->ayah = new AYAH(array(
@@ -19,28 +21,28 @@ class AYAHField extends FormField {
         ));
     }
     
-    function validate($validator) {
+    public function validate($validator)
+    {
         $score = $this->ayah->scoreResult();
         if ($score) {
-		return true;
-	}
+            return true;
+        }
         
         if ($validator) {
-		$validator->validationError($this, 'You have failed the human test!', "required");
-	}
+            $validator->validationError($this, 'You have failed the human test!', "required");
+        }
         return false;
     }
     
-    function jsValidation() {
+    public function jsValidation()
+    {
         return false;
     }
    
-    function Field($properties = array()) {              
+    public function Field($properties = array())
+    {
         Requirements::css('areyouahuman/css/AYAHField.css');
         
         return $this->ayah->getPublisherHTML();
     }
 }
-
-
-?>
